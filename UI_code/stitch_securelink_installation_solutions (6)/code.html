@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SecureNet Admin Panel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#ffdbc8",
+                        "on-primary-fixed": "#001c37",
+                        "primary-container": "#0a2540",
+                        "surface-dim": "#d8dadc",
+                        "primary-fixed-dim": "#b0c8eb",
+                        "secondary-container": "#fb7800",
+                        "surface-bright": "#f7f9fb",
+                        "secondary": "#994700",
+                        "inverse-on-surface": "#eff1f3",
+                        "tertiary-container": "#012544",
+                        "tertiary-fixed-dim": "#acc9ef",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#718db1",
+                        "on-primary-container": "#768dad",
+                        "inverse-primary": "#b0c8eb",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#49607e",
+                        "secondary-fixed-dim": "#ffb68b",
+                        "on-primary-fixed-variant": "#314865",
+                        "surface": "#f7f9fb",
+                        "tertiary-fixed": "#d2e4ff",
+                        "on-tertiary-fixed": "#001d36",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#e6e8ea",
+                        "outline-variant": "#c4c6ce",
+                        "on-background": "#191c1e",
+                        "on-secondary-fixed-variant": "#753400",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary-fixed-variant": "#2c4869",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#592600",
+                        "surface-container": "#eceef0",
+                        "on-surface-variant": "#43474d",
+                        "outline": "#74777e",
+                        "primary-fixed": "#d2e4ff",
+                        "primary": "#000f22",
+                        "on-surface": "#191c1e",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2d3133",
+                        "tertiary": "#000f21",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-container-low": "#f2f4f6",
+                        "background": "#f7f9fb",
+                        "on-secondary-fixed": "#321200"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "section-padding": "80px",
+                        "gutter": "24px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "16px",
+                        "stack-lg": "32px",
+                        "stack-md": "16px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h2": ["Inter"],
+                        "h3": ["Inter"],
+                        "button": ["Inter"],
+                        "h1": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h2": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "letterSpacing": "0", "fontWeight": "600"}],
+                        "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}],
+                        "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f7f9fb;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- SideNavBar Anchor -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#0A2540] dark:bg-slate-950 border-r border-slate-800 shadow-xl flex flex-col h-full py-6 z-50">
+<div class="px-6 mb-8">
+<h1 class="text-lg font-bold text-white font-h3">SecureNet Admin</h1>
+<p class="text-slate-400 text-xs font-label-caps mt-1">Network Management</p>
+</div>
+<nav class="flex-1 space-y-1">
+<!-- Active Tab: Dashboard -->
+<a class="bg-white/10 text-white border-l-4 border-[#FF7A00] px-4 py-3 flex items-center gap-3 transition-all font-body-md" href="#">
+<span class="material-symbols-outlined text-[#FF7A00]" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-white/5 hover:text-white transition-all font-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span>Manage Products</span>
+</a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-white/5 hover:text-white transition-all font-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="engineering">engineering</span>
+<span>Manage Services</span>
+</a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-white/5 hover:text-white transition-all font-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="gallery_thumbnail">gallery_thumbnail</span>
+<span>Manage Gallery</span>
+</a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-white/5 hover:text-white transition-all font-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span>View Inquiries</span>
+</a>
+</nav>
+<div class="px-4 mt-auto">
+<div class="bg-white/5 rounded-xl p-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden">
+<img alt="Admin User Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a senior network administrator in a modern office. He is wearing a clean, navy blue corporate shirt. The background is a soft-focus tech laboratory with server racks and blue ambient lighting, maintaining a high-contrast corporate aesthetic with a professional and reliable mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeVNvYXcnnEdZUz-TBlLU6mCJjAEtgDG43ajsdZYoLvJlZW9Cy3z67a9UFzGbNLwsUYYClbTsj1-yjkiK1z-LZYrVBNCjL9Nmk82HRPDOqR8V45HQnHbEhfA8W1-mxl1XMP_HYqeIDLF2jWpXr5hzAxLyNm8d9MLEEZLpvgQS_Y1dLXUDd6xHhPzzlhuxgIGVqwk1x2AgDaheaBrh75BqhslugsBm7cYZoIXUG31VC-1JKtgZGMrimxg2OUxy-C62Y41E-zcUD8nsA"/>
+</div>
+<div class="overflow-hidden">
+<p class="text-white text-sm font-semibold truncate">Admin User</p>
+<p class="text-slate-500 text-xs truncate">System Controller</p>
+</div>
+<a class="ml-auto text-slate-400 hover:text-white" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="settings">settings</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen p-8">
+<!-- Header Section -->
+<header class="flex justify-between items-center mb-10">
+<div>
+<h2 class="font-h2 text-h2 text-primary">System Overview</h2>
+<p class="text-on-surface-variant font-body-md">Real-time metrics for your network security services.</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-secondary-container hover:shadow-lg text-white px-6 py-3 rounded-lg font-button flex items-center gap-2 transition-all active:scale-95">
+<span class="material-symbols-outlined text-xl" data-icon="add">add</span>
+                    Quick Actions
+                </button>
+</div>
+</header>
+<!-- Stats Grid (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+<!-- Stat Card 1 -->
+<div class="bg-white p-6 rounded-xl shadow-[0px_4px_20px_rgba(10,37,64,0.08)] border border-slate-100 hover:translate-y-[-4px] transition-all duration-300">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-lg bg-primary-container/5 flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-2xl" data-icon="inventory_2">inventory_2</span>
+</div>
+<span class="text-green-600 bg-green-50 px-2 py-1 rounded text-xs font-bold">+12%</span>
+</div>
+<p class="text-on-surface-variant font-label-caps text-label-caps mb-1">Total Products</p>
+<h3 class="font-h3 text-h3 text-primary">1,284</h3>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-white p-6 rounded-xl shadow-[0px_4px_20px_rgba(10,37,64,0.08)] border border-slate-100 hover:translate-y-[-4px] transition-all duration-300">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-lg bg-primary-container/5 flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-2xl" data-icon="engineering">engineering</span>
+</div>
+<span class="text-blue-600 bg-blue-50 px-2 py-1 rounded text-xs font-bold">Stable</span>
+</div>
+<p class="text-on-surface-variant font-label-caps text-label-caps mb-1">Active Services</p>
+<h3 class="font-h3 text-h3 text-primary">42</h3>
+</div>
+<!-- Stat Card 3 -->
+<div class="bg-white p-6 rounded-xl shadow-[0px_4px_20px_rgba(10,37,64,0.08)] border border-slate-100 hover:translate-y-[-4px] transition-all duration-300">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-lg bg-primary-container/5 flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-2xl" data-icon="photo_library">photo_library</span>
+</div>
+<span class="text-on-surface-variant bg-slate-50 px-2 py-1 rounded text-xs font-bold">New</span>
+</div>
+<p class="text-on-surface-variant font-label-caps text-label-caps mb-1">Total Gallery Items</p>
+<h3 class="font-h3 text-h3 text-primary">315</h3>
+</div>
+<!-- Stat Card 4 -->
+<div class="bg-white p-6 rounded-xl shadow-[0px_4px_20px_rgba(10,37,64,0.08)] border border-slate-100 hover:translate-y-[-4px] transition-all duration-300 ring-2 ring-secondary-container/20">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-lg bg-secondary-container/10 flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-2xl" data-icon="contact_support" style="font-variation-settings: 'FILL' 1;">contact_support</span>
+</div>
+<span class="text-red-600 bg-red-50 px-2 py-1 rounded text-xs font-bold">Priority</span>
+</div>
+<p class="text-on-surface-variant font-label-caps text-label-caps mb-1">New Inquiries</p>
+<h3 class="font-h3 text-h3 text-primary">18</h3>
+</div>
+</div>
+<!-- Recent Inquiries Table Section -->
+<section class="bg-white rounded-xl shadow-[0px_4px_20px_rgba(10,37,64,0.08)] border border-slate-100 overflow-hidden">
+<div class="px-8 py-6 border-b border-slate-100 flex justify-between items-center">
+<h3 class="font-h3 text-h3 text-primary">Recent Inquiries</h3>
+<div class="flex gap-2">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-lg text-sm focus:ring-2 focus:ring-secondary-container w-64" placeholder="Search inquiries..." type="text"/>
+</div>
+<button class="p-2 text-on-surface-variant hover:bg-slate-50 rounded-lg">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-[#F1F5F9]">
+<tr>
+<th class="px-8 py-4 text-label-caps font-label-caps text-on-surface-variant">Name</th>
+<th class="px-8 py-4 text-label-caps font-label-caps text-on-surface-variant">Phone</th>
+<th class="px-8 py-4 text-label-caps font-label-caps text-on-surface-variant">Service</th>
+<th class="px-8 py-4 text-label-caps font-label-caps text-on-surface-variant">Status</th>
+<th class="px-8 py-4 text-label-caps font-label-caps text-on-surface-variant text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100">
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-8 py-5 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container text-white flex items-center justify-center text-xs font-bold">JS</div>
+<span class="font-medium text-primary">Jonathan Smith</span>
+</td>
+<td class="px-8 py-5 text-on-surface-variant">+1 (555) 0123</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-xs font-semibold">CCTV Installation</span>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-yellow-500"></span>
+<span class="text-sm font-medium">Pending</span>
+</div>
+</td>
+<td class="px-8 py-5 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-2 text-on-surface-variant hover:text-secondary-container hover:bg-secondary-container/5 rounded-lg transition-all" title="View">
+<span class="material-symbols-outlined text-xl" data-icon="visibility">visibility</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-secondary-container hover:bg-secondary-container/5 rounded-lg transition-all" title="Edit">
+<span class="material-symbols-outlined text-xl" data-icon="edit">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-8 py-5 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-white flex items-center justify-center text-xs font-bold">AM</div>
+<span class="font-medium text-primary">Angela Miller</span>
+</td>
+<td class="px-8 py-5 text-on-surface-variant">+1 (555) 0456</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-xs font-semibold">Network Wiring</span>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-blue-500"></span>
+<span class="text-sm font-medium">Reviewed</span>
+</div>
+</td>
+<td class="px-8 py-5 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-2 text-on-surface-variant hover:text-secondary-container hover:bg-secondary-container/5 rounded-lg transition-all" title="View">
+<span class="material-symbols-outlined text-xl" data-icon="visibility">visibility</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-secondary-container hover:bg-secondary-container/5 rounded-lg transition-all" title="Edit">
+<span class="material-symbols-outlined text-xl" data-icon="edit">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-8 py-5 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-container text-white flex items-center justify-center text-xs font-bold">RK</div>
+<span class="font-medium text-primary">Robert King</span>
+</td>
+<td class="px-8 py-5 text-on-surface-variant">+1 (555) 0789</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-xs font-semibold">Enterprise Security</span>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="text-sm font-medium">Completed</span>
+</div>
+</td>
+<td class="px-8 py-5 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-2 text-on-surface-variant hover:text-secondary-container hover:bg-secondary-container/5 rounded-lg transition-all" title="View">
+<span class="material-symbols-outlined text-xl" data-icon="visibility">visibility</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-secondary-container hover:bg-secondary-container/5 rounded-lg transition-all" title="Edit">
+<span class="material-symbols-outlined text-xl" data-icon="edit">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-8 py-5 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center text-xs font-bold">LC</div>
+<span class="font-medium text-primary">Linda Chen</span>
+</td>
+<td class="px-8 py-5 text-on-surface-variant">+1 (555) 0999</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant rounded-full text-xs font-semibold">CCTV Installation</span>
+</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-red-500"></span>
+<span class="text-sm font-medium">Urgent</span>
+</div>
+</td>
+<td class="px-8 py-5 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-2 text-on-surface-variant hover:text-secondary-container hover:bg-secondary-container/5 rounded-lg transition-all" title="View">
+<span class="material-symbols-outlined text-xl" data-icon="visibility">visibility</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-secondary-container hover:bg-secondary-container/5 rounded-lg transition-all" title="Edit">
+<span class="material-symbols-outlined text-xl" data-icon="edit">edit</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-8 py-4 bg-surface-container-low flex items-center justify-between">
+<p class="text-sm text-on-surface-variant">Showing 4 of 18 inquiries</p>
+<div class="flex gap-2">
+<button class="px-3 py-1 border border-slate-200 rounded text-sm hover:bg-white disabled:opacity-50" disabled="">Previous</button>
+<button class="px-3 py-1 bg-white border border-slate-200 rounded text-sm hover:bg-slate-50 shadow-sm">Next</button>
+</div>
+</div>
+</section>
+<!-- Footer Info -->
+<footer class="mt-12 pt-8 border-t border-slate-200">
+<div class="flex justify-between items-center text-on-surface-variant text-sm font-body-md">
+<p>© 2024 SecureNet CCTV &amp; Network Solutions. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-secondary-container transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-secondary-container transition-colors" href="#">System Support</a>
+<a class="hover:text-secondary-container transition-colors" href="#">v2.4.0</a>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

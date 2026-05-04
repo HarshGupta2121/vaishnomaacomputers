@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gallery | SecureNet Installers</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed": "#ffdbc8",
+                      "on-primary-fixed": "#001c37",
+                      "primary-container": "#0a2540",
+                      "surface-dim": "#d8dadc",
+                      "primary-fixed-dim": "#b0c8eb",
+                      "secondary-container": "#fb7800",
+                      "surface-bright": "#f7f9fb",
+                      "secondary": "#994700",
+                      "inverse-on-surface": "#eff1f3",
+                      "tertiary-container": "#012544",
+                      "tertiary-fixed-dim": "#acc9ef",
+                      "on-error": "#ffffff",
+                      "on-tertiary-container": "#718db1",
+                      "on-primary-container": "#768dad",
+                      "inverse-primary": "#b0c8eb",
+                      "on-secondary": "#ffffff",
+                      "surface-tint": "#49607e",
+                      "secondary-fixed-dim": "#ffb68b",
+                      "on-primary-fixed-variant": "#314865",
+                      "surface": "#f7f9fb",
+                      "tertiary-fixed": "#d2e4ff",
+                      "on-tertiary-fixed": "#001d36",
+                      "error": "#ba1a1a",
+                      "surface-container-high": "#e6e8ea",
+                      "outline-variant": "#c4c6ce",
+                      "on-background": "#191c1e",
+                      "on-secondary-fixed-variant": "#753400",
+                      "surface-variant": "#e0e3e5",
+                      "on-tertiary-fixed-variant": "#2c4869",
+                      "on-error-container": "#93000a",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-container": "#592600",
+                      "surface-container": "#eceef0",
+                      "on-surface-variant": "#43474d",
+                      "outline": "#74777e",
+                      "primary-fixed": "#d2e4ff",
+                      "primary": "#000f22",
+                      "on-surface": "#191c1e",
+                      "on-tertiary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "inverse-surface": "#2d3133",
+                      "tertiary": "#000f21",
+                      "on-primary": "#ffffff",
+                      "surface-container-highest": "#e0e3e5",
+                      "surface-container-low": "#f2f4f6",
+                      "background": "#f7f9fb",
+                      "on-secondary-fixed": "#321200"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "section-padding": "80px",
+                      "gutter": "24px",
+                      "stack-sm": "8px",
+                      "margin-mobile": "16px",
+                      "stack-lg": "32px",
+                      "stack-md": "16px"
+              },
+              "fontFamily": {
+                      "label-caps": ["Inter"],
+                      "body-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "h2": ["Inter"],
+                      "h3": ["Inter"],
+                      "button": ["Inter"],
+                      "h1": ["Inter"]
+              },
+              "fontSize": {
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "h2": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "h3": ["24px", {"lineHeight": "1.3", "letterSpacing": "0", "fontWeight": "600"}],
+                      "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}],
+                      "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 24px;
+        }
+        @media (min-width: 768px) { .masonry-grid { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { column-count: 3; } }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+        }
+        .custom-shadow {
+            box-shadow: 0px 4px 20px rgba(10, 37, 64, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar -->
+<header class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-100 dark:border-slate-800 shadow-sm docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+<div class="text-xl font-black text-[#0A2540] dark:text-white uppercase tracking-tighter">
+                SecureNet Installers
+            </div>
+<nav class="hidden md:flex gap-8 items-center h-full">
+<a class="font-['Inter'] font-semibold text-sm uppercase tracking-wider text-[#0A2540] dark:text-slate-300 hover:text-[#FF7A00] transition-colors duration-200" href="#">Home</a>
+<a class="font-['Inter'] font-semibold text-sm uppercase tracking-wider text-[#0A2540] dark:text-slate-300 hover:text-[#FF7A00] transition-colors duration-200" href="#">Products</a>
+<a class="font-['Inter'] font-semibold text-sm uppercase tracking-wider text-[#0A2540] dark:text-slate-300 hover:text-[#FF7A00] transition-colors duration-200" href="#">Services</a>
+<a class="font-['Inter'] font-semibold text-sm uppercase tracking-wider text-[#FF7A00] border-b-2 border-[#FF7A00] pb-1" href="#">Gallery</a>
+<a class="font-['Inter'] font-semibold text-sm uppercase tracking-wider text-[#0A2540] dark:text-slate-300 hover:text-[#FF7A00] transition-colors duration-200" href="#">Contact</a>
+</nav>
+<div class="flex gap-4">
+<button class="hidden lg:block px-4 py-2 text-sm font-semibold text-[#0A2540] border-2 border-[#0A2540] rounded-lg hover:bg-[#0A2540] hover:text-white transition-all">Call Now</button>
+<button class="bg-[#FF7A00] text-white px-6 py-2 rounded-lg font-button text-button shadow-md hover:shadow-xl active:opacity-80 active:scale-95 transition-all">Get a Quote</button>
+</div>
+</div>
+</header>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<section class="py-section-padding bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<h1 class="font-h1 text-h1 text-primary-container mb-stack-md">Installation Showcase</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Explore our portfolio of precision-engineered security and networking solutions. From enterprise-grade server rooms to smart residential CCTV systems.
+                </p>
+</div>
+</section>
+<!-- Gallery Masonry Grid -->
+<section class="pb-section-padding px-6">
+<div class="max-w-7xl mx-auto">
+<div class="masonry-grid">
+<!-- Item 1: Server Rack -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative bg-white rounded-xl overflow-hidden custom-shadow transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+<img class="w-full h-auto object-cover" data-alt="A meticulously organized enterprise server rack featuring vibrant blue and orange fiber optic cables arranged in perfect parallel lines. The lighting is crisp and clinical, highlighting the metallic textures of the networking hardware. This high-tech environment embodies technical precision and corporate reliability within a modern data center setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtxZHxNCLUB6WiN_BuhLGMELZrsi0Ovo6t8MiPraE3RWjS3u4Ea8uhAkxsgDkfOE3dT2bb_4oLIFlNv8UnmxYYJkJw9jdkB15p3WKTmMqrwwIZmNOPFn78JdAMfoIy15EJNEc2y1Pol7JivkybhTXaJqFgbABC0QG8tRBJhUCa9PDVYqpZlL-zKaLMbR948i0NsafMPuFBznckORbj66i_wzJPUM-NE-ah2YAhxVKZGUWRYFqY_H2-EOMKHkX5fW0BHfOshcc3ubIH"/>
+<div class="p-stack-md">
+<span class="text-label-caps font-label-caps text-secondary uppercase mb-2 block">Data Centers</span>
+<h3 class="text-h3 font-h3 text-primary-container mb-1">High-Density Fiber Routing</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Central business district main frame installation with 10Gbps capability.</p>
+</div>
+</div>
+</div>
+<!-- Item 2: CCTV Installation -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative bg-white rounded-xl overflow-hidden custom-shadow transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+<img class="w-full h-auto object-cover" data-alt="A professional security technician in a navy blue uniform mounting a sleek, white high-definition dome CCTV camera onto a clean exterior wall. The scene is bathed in natural daylight, emphasizing the clean lines and professional installation. The aesthetic is modern and secure, suggesting a premium residential safety solution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH7fdBK2zjZ0WejBXJOtbFA9L56TVeE171Nu3gbfPQ8KFctexa3t09bRRP7JLdeiR5HWn2iR4l3z-dKcd-U6zb-YqNo0enudTtH2xVFioK8NoIdGz0s1E7HUgAHGnEogf4xrIcnlTZLk1avSzeSh1UouXyznpb1-cXc3NGTzc3ccvO5uPQP4C658HHLKhxeNKY8sqnuUIB0tcWD2OuNqXbXKh5cfKqa-b0nnysl_tJcqdw7yp5qPUsy24zdDXP9JoA_A4hiivanWsz"/>
+<div class="p-stack-md">
+<span class="text-label-caps font-label-caps text-secondary uppercase mb-2 block">CCTV Systems</span>
+<h3 class="text-h3 font-h3 text-primary-container mb-1">4K Perimeter Surveillance</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Weatherproof dome camera installation for a luxury residential estate.</p>
+</div>
+</div>
+</div>
+<!-- Item 3: Smart Home Hub -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative bg-white rounded-xl overflow-hidden custom-shadow transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+<img class="w-full h-auto object-cover" data-alt="A minimalist smart home control panel integrated into a textured grey wall, surrounded by ambient warm LED lighting. The interface displays a clean dashboard of security status and network health. The overall mood is sophisticated and user-friendly, highlighting the seamless integration of technology into modern interior design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL3FH-k8lcVfpM66won7J7CqGRg_ke4BKGdBXrc4YC4P45ipss3KNrgeZV_5WJt2T6DqvHiFSBMKBXmagqtl-8SIn3JmapzU_ughQRNLzjU898JwAwktf6fXntPFg-PR-zfhFG126kLv6GEtpvWhQaWQPh0-DXc7-HsPVZ1NnkPslsINQVoPrfqZPCymuZNaY6e_QWV-lUNDEFYAZroc-hklGzBJePthiJhR48y4CRRNmjVqffAxj8qQPGiFwQeWw4l02-GApcf723"/>
+<div class="p-stack-md">
+<span class="text-label-caps font-label-caps text-secondary uppercase mb-2 block">Automation</span>
+<h3 class="text-h3 font-h3 text-primary-container mb-1">Unified Control Center</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Centralized interface for lighting, security, and climate management.</p>
+</div>
+</div>
+</div>
+<!-- Item 4: Wireless Bridge -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative bg-white rounded-xl overflow-hidden custom-shadow transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+<img class="w-full h-auto object-cover" data-alt="A long-range wireless point-to-point bridge antenna mounted on a industrial steel mast against a clear, bright blue sky. The engineering focus is on the robust mounting hardware and clean cable management leading into the conduit. The lighting is bright and sharp, conveying high-performance connectivity and reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq6R13y9WYrErNCw42iUXs0NW33I_0AhHLDCuWRKbIgzkCtbGLRM7q8I7Eeon51YppZuSZYTiEjEk-4FKYs7K82jk9b0DD1cjLREUStEdCH9Bi7bAbNQHzNxCh0p5tMBxpy6oMJouqsmbIEQizpqKSwnLRvQdrNAXcHKA-BWyec3GJfCvOIaUWCsd1bvfZ8zQjIqyUWwgulXunCH4JsRnberzYEQRUEKbhjFmMCMdUuPkFX_IKF7aRXsXznAbs4YAGTShHqgVGbKXH"/>
+<div class="p-stack-md">
+<span class="text-label-caps font-label-caps text-secondary uppercase mb-2 block">Networking</span>
+<h3 class="text-h3 font-h3 text-primary-container mb-1">Point-to-Point Wireless</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Campus-wide connectivity solution bridging three separate warehouse facilities.</p>
+</div>
+</div>
+</div>
+<!-- Item 5: Wiring Detail -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative bg-white rounded-xl overflow-hidden custom-shadow transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+<img class="w-full h-auto object-cover" data-alt="Close-up macro photography of Cat6 Ethernet cables being terminated into a patch panel with extreme surgical precision. The cables are color-coded in vibrant orange and deep blue, creating a visually pleasing technical pattern. The lighting is focused and warm, emphasizing the craftsmanship and attention to detail in technical infrastructure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaGj5YxDoUnmdbHZJygHuBrZeHcW7bRSg_ogH9X2sZGD3uctGkbsAdhaLeFwtkWyjg_UiyJ0zNRQbE622WfUFsNJI_bIPuAR6-r78LvImshN2NoapSraYxv8t5nL6Tcg-iWYHWBPsjew0OFA8U37wF8T_DLMa5Sge_gwqgGCVXhY-uEjvpOXvuh88mAy0JiiA19aFhryMicGsXGW2IM85s2NEc4eg7ZTrbiR58m1eK7-aoyJotCRSO4xNNMoSzi7jPGaJUo00pk1u5"/>
+<div class="p-stack-md">
+<span class="text-label-caps font-label-caps text-secondary uppercase mb-2 block">Technical Detail</span>
+<h3 class="text-h3 font-h3 text-primary-container mb-1">Structured Cabling</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Detail shot of our signature 'Secure-Tie' cable management protocol.</p>
+</div>
+</div>
+</div>
+<!-- Item 6: Access Control -->
+<div class="masonry-item group cursor-pointer">
+<div class="relative bg-white rounded-xl overflow-hidden custom-shadow transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+<img class="w-full h-auto object-cover" data-alt="A modern biometric access control reader mounted on a sleek glass door frame in a high-end corporate lobby. The device features a subtle glowing green ring, indicating a successful authorization. The background shows a soft-focus minimalist office interior with cool blue tones and professional lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzPTW2pSFWpvadt0GwhrbMSVqXTpxGHIrWRvuUg2E603cLzq4ahRENXUR9WI1FCRvI8u2ZVY_xv8sE4-WvpJKecASwG7BcD4yo45_yJQ4OP7_E06reaoY0Bbeb4NKRyWTmxLDpVMYAvTle0cEOoLV2ufx5pTfFzS9iSn1njhAiYy7me71DAwrQFFZR0kqqWi6sL23N0vCQiO3_zI7taKK-YzJ-Qo9d5LF-3DJilpbevn84rLhQ_mkI8uuypfASiA5-s0-_MvqnYGC2"/>
+<div class="p-stack-md">
+<span class="text-label-caps font-label-caps text-secondary uppercase mb-2 block">Security</span>
+<h3 class="text-h3 font-h3 text-primary-container mb-1">Biometric Entry Point</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Multi-factor authentication system for a secure government research facility.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating WhatsApp Button -->
+<a class="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform active:scale-95 group" href="#">
+<span class="material-symbols-outlined text-4xl" data-icon="chat">chat</span>
+<span class="absolute right-full mr-4 bg-white text-[#0A2540] px-4 py-2 rounded-lg text-sm font-bold custom-shadow opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+            Chat with an Installer
+        </span>
+</a>
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 w-full">
+<div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-1">
+<div class="text-lg font-bold text-[#0A2540] dark:text-white mb-4">SecureNet CCTV &amp; Network Solutions</div>
+<p class="font-['Inter'] text-sm leading-relaxed text-slate-500 dark:text-slate-400">
+                    Leading the industry in secure network infrastructure and advanced surveillance systems for over 15 years.
+                </p>
+</div>
+<div>
+<h4 class="font-bold text-[#0A2540] dark:text-white mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#0A2540] dark:hover:text-white transition-all text-sm" href="#">CCTV Installation</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#0A2540] dark:hover:text-white transition-all text-sm" href="#">Network Cabling</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#0A2540] dark:hover:text-white transition-all text-sm" href="#">Smart Automation</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#0A2540] dark:hover:text-white transition-all text-sm" href="#">Maintenance</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#0A2540] dark:text-white mb-4">Company</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#0A2540] dark:hover:text-white transition-all text-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#0A2540] dark:hover:text-white transition-all text-sm" href="#">Terms of Service</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#0A2540] dark:hover:text-white transition-all text-sm" href="#">Sitemap</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#0A2540] dark:hover:text-white transition-all text-sm" href="#">Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#0A2540] dark:text-white mb-4">Contact</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-2">123 Tech Avenue, Silicon Valley</p>
+<p class="text-sm text-[#FF7A00] font-bold">+1 (555) 000-1234</p>
+<div class="flex gap-4 mt-4">
+<span class="material-symbols-outlined text-slate-400 hover:text-[#FF7A00] cursor-pointer" data-icon="facebook">social_leaderboard</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-[#FF7A00] cursor-pointer" data-icon="language">language</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-[#FF7A00] cursor-pointer" data-icon="mail">mail</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 py-6 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-['Inter'] text-sm leading-relaxed text-slate-500 dark:text-slate-400">© 2024 SecureNet CCTV &amp; Network Solutions. All rights reserved.</p>
+<div class="flex gap-6">
+<span class="text-xs text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="verified_user">verified_user</span> ISO 27001 Certified
+                </span>
+<span class="text-xs text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="security">security</span> Licensed Installers
+                </span>
+</div>
+</div>
+</footer>
+</body></html>

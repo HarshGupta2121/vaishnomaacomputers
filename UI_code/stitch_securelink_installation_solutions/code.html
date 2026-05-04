@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed": "#ffdbc8",
+                      "on-primary-fixed": "#001c37",
+                      "primary-container": "#0a2540",
+                      "surface-dim": "#d8dadc",
+                      "primary-fixed-dim": "#b0c8eb",
+                      "secondary-container": "#fb7800",
+                      "surface-bright": "#f7f9fb",
+                      "secondary": "#994700",
+                      "inverse-on-surface": "#eff1f3",
+                      "tertiary-container": "#012544",
+                      "tertiary-fixed-dim": "#acc9ef",
+                      "on-error": "#ffffff",
+                      "on-tertiary-container": "#718db1",
+                      "on-primary-container": "#768dad",
+                      "inverse-primary": "#b0c8eb",
+                      "on-secondary": "#ffffff",
+                      "surface-tint": "#49607e",
+                      "secondary-fixed-dim": "#ffb68b",
+                      "on-primary-fixed-variant": "#314865",
+                      "surface": "#f7f9fb",
+                      "tertiary-fixed": "#d2e4ff",
+                      "on-tertiary-fixed": "#001d36",
+                      "error": "#ba1a1a",
+                      "surface-container-high": "#e6e8ea",
+                      "outline-variant": "#c4c6ce",
+                      "on-background": "#191c1e",
+                      "on-secondary-fixed-variant": "#753400",
+                      "surface-variant": "#e0e3e5",
+                      "on-tertiary-fixed-variant": "#2c4869",
+                      "on-error-container": "#93000a",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-container": "#592600",
+                      "surface-container": "#eceef0",
+                      "on-surface-variant": "#43474d",
+                      "outline": "#74777e",
+                      "primary-fixed": "#d2e4ff",
+                      "primary": "#000f22",
+                      "on-surface": "#191c1e",
+                      "on-tertiary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "inverse-surface": "#2d3133",
+                      "tertiary": "#000f21",
+                      "on-primary": "#ffffff",
+                      "surface-container-highest": "#e0e3e5",
+                      "surface-container-low": "#f2f4f6",
+                      "background": "#f7f9fb",
+                      "on-secondary-fixed": "#321200"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "section-padding": "80px",
+                      "gutter": "24px",
+                      "stack-sm": "8px",
+                      "margin-mobile": "16px",
+                      "stack-lg": "32px",
+                      "stack-md": "16px"
+              },
+              "fontSize": {
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "h2": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "h3": ["24px", {"lineHeight": "1.3", "letterSpacing": "0", "fontWeight": "600"}],
+                      "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}],
+                      "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md docked full-width top-0 sticky z-50 border-b border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+<div class="text-xl font-black text-[#0A2540] dark:text-white">SecureNet Installers</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-['Inter'] font-semibold text-sm uppercase tracking-wider text-[#FF7A00] border-b-2 border-[#FF7A00] pb-1 hover:text-[#FF7A00] transition-colors duration-200" href="#">Home</a>
+<a class="font-['Inter'] font-semibold text-sm uppercase tracking-wider text-[#0A2540] dark:text-slate-300 hover:text-[#FF7A00] transition-colors duration-200" href="#">Products</a>
+<a class="font-['Inter'] font-semibold text-sm uppercase tracking-wider text-[#0A2540] dark:text-slate-300 hover:text-[#FF7A00] transition-colors duration-200" href="#">Services</a>
+<a class="font-['Inter'] font-semibold text-sm uppercase tracking-wider text-[#0A2540] dark:text-slate-300 hover:text-[#FF7A00] transition-colors duration-200" href="#">Gallery</a>
+<a class="font-['Inter'] font-semibold text-sm uppercase tracking-wider text-[#0A2540] dark:text-slate-300 hover:text-[#FF7A00] transition-colors duration-200" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block text-[#0A2540] font-semibold text-sm px-4 py-2 hover:opacity-80 transition-all">Call Now</button>
+<button class="bg-[#FF7A00] text-white px-6 py-3 rounded-lg font-button text-button shadow-lg hover:opacity-90 active:scale-95 transition-all">Get a Quote</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-primary-container text-white min-h-[870px] flex items-center">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40" data-alt="A cinematic, high-angle shot of a sophisticated security control room with multiple glowing monitors displaying real-time surveillance footage from various camera angles. The environment is clean, professional, and technologically advanced, with soft blue lighting illuminating the dark tech-focused space. Transparent glass panels and subtle orange highlights emphasize the brand's security expertise. The atmosphere is calm, precise, and highly secure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsUok1_gUYgUACkVuEAaQ78ZHzFnRrx8s5k9cBxHMAftv-RLqs3AJno3y0fZHRB5A76xSYVF3VyfdiuNKmLs-BIUDUAoETrWw8ByYCSi7KH8Wv6TXs4Muru4vYVc6vlFhycBUBDzqERhE_L_RIFqxdtNihB9x9CGAusJNxQ30wHM3uzAUQVMpjU30MvvCSLriPBHjOJK_QvyuVOevhNNtq4PDIN18Rxc2yVF8zkhhWG6CYUWncQvKaTceFNUmOpS4zxcC8fGJj9mp1"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container via-primary-container/80 to-transparent"></div>
+</div>
+<div class="container-max mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="max-w-2xl">
+<span class="inline-block bg-secondary-container text-white px-4 py-1.5 rounded-full font-label-caps text-label-caps mb-6">AUTHORIZED SECURITY PARTNER</span>
+<h1 class="font-h1 text-h1 mb-6 leading-tight">Professional CCTV &amp; Network Installation Services</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-10 max-w-lg">
+                        Secure your home, school, and office with reliable surveillance solutions. We provide end-to-end network infrastructure and high-definition monitoring systems.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-secondary-container text-white px-8 py-4 rounded-lg font-button text-button shadow-xl hover:scale-105 transition-transform">Get Quote</button>
+<button class="border-2 border-white text-white px-8 py-4 rounded-lg font-button text-button hover:bg-white/10 transition-colors">View Products</button>
+</div>
+</div>
+<div class="hidden md:block">
+<div class="bg-white/10 backdrop-blur-xl p-6 rounded-2xl border border-white/20 shadow-2xl">
+<img class="rounded-xl w-full h-[400px] object-cover" data-alt="A sleek, modern high-definition 4K dome security camera with infrared sensors mounted on a clean white surface. The camera design is minimalist and professional, featuring a metallic finish. Soft, directional studio lighting highlights the camera's lens and premium build quality against a neutral, sophisticated background, conveying trust and high-end technical capability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3QlPcCNHAb1zKeqBROzERyXhuYFzCailk_9lmy1-Jd65F7FBoyufJxFrXlbtMm8jIER3J3ta19dpcUN9WN6kbWQawMJYx73mYRbHRaaT17CPY_Wfcw2Wuy8jF6VTXEEA4XUI48NPuVPtPzSybxTLNueIXZcO5FEAdLwaWJH4weTg0ltCOt55j-oO-fIm1lAWfJFyySANTYE6sKinBRRSYPgC_8AfAcDAmZFUz6IoUlLhJO0pRoh5LqLqZ6VLVsYUAQhouuKf1ZGVo"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-12 bg-surface-container-lowest border-y border-slate-100">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center">
+<div class="text-[#FF7A00] font-h2 text-h2 mb-1">200+</div>
+<div class="text-on-surface-variant font-label-caps text-label-caps">Installations</div>
+</div>
+<div class="text-center">
+<div class="text-[#FF7A00] font-h2 text-h2 mb-1">50+</div>
+<div class="text-on-surface-variant font-label-caps text-label-caps">Clients</div>
+</div>
+<div class="text-center">
+<div class="text-[#FF7A00] font-h2 text-h2 mb-1">5+</div>
+<div class="text-on-surface-variant font-label-caps text-label-caps">Years Experience</div>
+</div>
+<div class="text-center">
+<div class="text-[#FF7A00] font-h2 text-h2 mb-1">24/7</div>
+<div class="text-on-surface-variant font-label-caps text-label-caps">Support</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Highlight -->
+<section class="py-section-padding bg-background">
+<div class="container-max mx-auto px-6">
+<div class="mb-16 text-center">
+<h2 class="font-h2 text-h2 text-primary mb-4">Comprehensive Technical Solutions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">From enterprise networking to residential surveillance, we provide precision-engineered security infrastructure designed to protect your assets.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Card 1 -->
+<div class="bg-white p-8 rounded-xl shadow-[0px_4px_20px_rgba(10,37,64,0.08)] hover:translate-y-[-4px] transition-all duration-300 border-t-4 border-secondary-container">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-6">videocam</span>
+<h3 class="font-h3 text-h3 mb-4">CCTV Installation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Advanced IP and analog camera systems with remote mobile monitoring and motion detection alerts.</p>
+<a class="text-secondary font-semibold flex items-center gap-2 hover:gap-3 transition-all" href="#">Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Card 2 -->
+<div class="bg-white p-8 rounded-xl shadow-[0px_4px_20px_rgba(10,37,64,0.08)] hover:translate-y-[-4px] transition-all duration-300 border-t-4 border-secondary-container">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-6">router</span>
+<h3 class="font-h3 text-h3 mb-4">Router Setup</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">High-speed network configuration, Wi-Fi 6 mesh deployment, and secure firewall optimization for business use.</p>
+<a class="text-secondary font-semibold flex items-center gap-2 hover:gap-3 transition-all" href="#">Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Card 3 -->
+<div class="bg-white p-8 rounded-xl shadow-[0px_4px_20px_rgba(10,37,64,0.08)] hover:translate-y-[-4px] transition-all duration-300 border-t-4 border-secondary-container">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-6">engineering</span>
+<h3 class="font-h3 text-h3 mb-4">Maintenance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Proactive health checks for your entire security network to ensure 100% uptime and clear video evidence.</p>
+<a class="text-secondary font-semibold flex items-center gap-2 hover:gap-3 transition-all" href="#">Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Card 4 -->
+<div class="bg-white p-8 rounded-xl shadow-[0px_4px_20px_rgba(10,37,64,0.08)] hover:translate-y-[-4px] transition-all duration-300 border-t-4 border-secondary-container">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-6">build</span>
+<h3 class="font-h3 text-h3 mb-4">Repair</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Expert diagnostic and troubleshooting for failed hardware, cabling issues, and software glitches.</p>
+<a class="text-secondary font-semibold flex items-center gap-2 hover:gap-3 transition-all" href="#">Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products Grid (Asymmetric Bento) -->
+<section class="py-section-padding bg-surface-container-low">
+<div class="container-max mx-auto px-6">
+<div class="flex justify-between items-end mb-12">
+<div>
+<span class="text-secondary font-label-caps text-label-caps tracking-widest mb-2 block uppercase">Premium Hardware</span>
+<h2 class="font-h2 text-h2 text-primary">Featured Security Products</h2>
+</div>
+<button class="text-primary-container font-semibold border-b-2 border-primary-container pb-1 hover:text-secondary-container hover:border-secondary-container transition-all">Browse All Products</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 h-auto md:h-[700px]">
+<div class="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-2xl bg-white shadow-xl">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A professional-grade AI-powered PTZ security camera with a large optical zoom lens. The camera is showcased in a high-tech laboratory setting with soft focus server racks in the background. The lighting is crisp and cool-toned, emphasizing the advanced electronic components and premium construction materials of the security equipment. High-contrast and minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxx2Yf4wtQr0D4dKyQ8cG7WEe05c-P_PVpxOS8TkH0MROEe8iXXKRtvnBlhtCbQJwgRwZArjMXjP7IqNeO3sLbPjZndedZH03S4Z3du2fPaYntlnHAriCLo319slCAICsBWrODheSdDuE6RH_Xq94c749jv6uSU-CGl5p4Wqg77pFgSVEsffiVPJ_QY6DXFYgi_QXiK0dQegWzcniWfbw01PwgV4aflEySyYyjZZFZJvHKQYZou4ivQObCLHDO0D4HtupC8Skb8_ak"/>
+<div class="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black/80 via-black/20 to-transparent text-white">
+<h4 class="font-h3 text-h3 mb-2">Smart AI Dome 4K</h4>
+<p class="font-body-md opacity-90 mb-4 max-w-md">Next-generation motion tracking with facial recognition and thermal imaging capabilities.</p>
+<span class="bg-[#FF7A00] px-4 py-2 rounded-lg font-button text-sm uppercase">Hot Item</span>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-2xl bg-white shadow-xl">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A professional 16-channel Network Video Recorder (NVR) unit with a sleek brushed aluminum front panel, placed on a modern dark wood office desk. The scene features a high-end minimalist office background with soft bokeh lighting. The NVR status LEDs are glowing soft blue, indicating active recording and secure network connectivity. Minimalist, corporate visual style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlg73LlColhK8M-m3JA0VbsGFjCZvds5Sgs9V5fUa0LZIoNFo7h__Dr7LSq7RTW-UXNe5v51BDWV7S6qoOTKlDv7CVlnCFmPj2HgELI0M2QdswR8jI3i4pi8fFFIkeO14TRWDDuDT5GJIpAz1AwI8wOT7OVe7lofZ7NIVVNAVTLRWwhnXFEaZ_7LOEJ3hOX8sOf0GVbZyWPkvrOD3gNOsuV0fzM6IFmWhmkyHFHthqUZxqVHm_KLboHYSRVhyGcRdMOn_fHarrJu6U"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-center items-center text-white text-center p-4">
+<h4 class="font-h3 text-h3 mb-2">16-Channel NVR</h4>
+<p class="font-body-md">Seamless recording &amp; storage</p>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-2xl bg-white shadow-xl">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close-up detail of a high-security biometric smart door lock with a glowing fingerprint scanner. The lock is installed on a modern, dark textured wood door. The lighting is moody and focused, highlighting the premium metal finish and technological sophistication. The aesthetic is clean, modern, and ultra-secure, reflecting a high-end residential environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgXTv1QmFOVok22ruVJMyDY7Ze1pcQ3vLs7VgVJo53KDiz1Cdl-iMP7UZt8ZfpdIhW2AlpvJWF0e-KqCo-Fl3TKGfHpt44nltzK0LqYSYKf2HKWDOLK26ij5mq6qx1rKTFVWDLQHXkq0ojEpYyb6BKQQlR05KgjjjUagW6Pu4_H9dlLkVswY0G-j4NQOhqsSb_XAGppGeCvRDVhfLyiH227Im0dtBeYqM8HhcbBU4fdV1CIKkrzKuwtjonzr_TIOTcIckPw4EJcheu"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-center items-center text-white text-center p-4">
+<h4 class="font-h3 text-h3 mb-2">Biometric Entry</h4>
+<p class="font-body-md">Advanced access control</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-section-padding bg-background overflow-hidden relative">
+<div class="container-max mx-auto px-6 relative z-10">
+<div class="text-center mb-16">
+<h2 class="font-h2 text-h2 text-primary mb-4">Trusted by Leading Organizations</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+<div class="flex gap-1 text-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface italic mb-6">"The installation was incredibly professional. Our office network has never been more stable, and the camera clarity is phenomenal."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-200">
+<img class="w-full h-full rounded-full object-cover" data-alt="A professional headshot of a middle-aged male business executive in a sharp navy suit, smiling confidently. The background is a blurred modern corporate office with bright natural lighting. The image quality is crisp and high-end, representing a satisfied corporate client." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5MM5WxEc0gq6nFSOhMQUOcsDkhC2g8z1vPKFgL8KkjpE_Uuz7GiQ41viFb9DtxrYbFQZe1loNry9n20PFWdhiufPVvoRyqMU1uFi08Du6SscV9O760DKRvYWCNhkeMEbIeiq8TZ-StGJJxlYIN4CGYnvMVh1QdmXCxzBP4_jTMnfX9MzFi-TbA0G6glHUvFBHC_TyWS0OlyJzm5qWvZ9ARGPlsQ-oIsY-S2flTMxHs9Jc8P-FvY5h5JiQbe8jxQ9LuLO1TjYJ4_wV"/>
+</div>
+<div>
+<h5 class="font-semibold text-primary">Sarah Jenkins</h5>
+<p class="text-xs text-on-surface-variant uppercase font-bold tracking-tight">Operations Manager, FinTech Global</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+<div class="flex gap-1 text-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface italic mb-6">"Highly recommend for school security. They understood our specific safety needs and delivered a robust, easy-to-manage system."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-200">
+<img class="w-full h-full rounded-full object-cover" data-alt="A professional headshot of a female school administrator with a warm and trustworthy expression. She is wearing professional attire against a brightly lit academic hallway background. The overall aesthetic is professional, clean, and reliable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm9x0CrXjzskuHWYTbJU5CdjxeQCWZi-uSOmNYzbDLb5Rc2muVXxBxV3KMWEnpeYDISPCJx_L_DX7JgRLfySOC7zMJbIi31O2pJl6CNm9GLZBmza9KGTVsBiqKWti2AInHkZl0UQfvA0SOe9sWTwiFz4_QjnReu619Ut67i44GJCOEizhK0FFO48bMwIQY1kiao6lFl_G8th_hfp1n-UpvkIKpB-5WKDk5uevURcH-_pEuZe1w9VFq-Xkk1e5kXUdHPU1nkDvLgiC9"/>
+</div>
+<div>
+<h5 class="font-semibold text-primary">Dr. Robert Chen</h5>
+<p class="text-xs text-on-surface-variant uppercase font-bold tracking-tight">Principal, Westview Academy</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+<div class="flex gap-1 text-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-on-surface italic mb-6">"Excellent after-sales support. Any time we have a question about the remote app, they respond within minutes. Truly reliable."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-200">
+<img class="w-full h-full rounded-full object-cover" data-alt="A professional portrait of a tech-savvy homeowner in their late 30s with a modern, approachable look. The background shows a portion of a minimalist, well-designed smart home living room with soft evening light. The visual style is premium and lifestyle-oriented." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgf9HiCPkWW1uoLu1aTHX5X4HgVURFLIcGg05QA2lQkmNF14FpML5Wjdrgwg-zfoHKr7SBkkFlgHUHOGEnvVHs1wGJVs98938yjpFBNtcF1QmcqhxhB5vIFGbgNr6NUyY6K_ckKHjx6bB58e_aWs6z8rCj_py7t7QGs0htmX9gECgBdctMnjRqh3J7R5DotUNq0XIQU7aVxqH5sK8JhCW5G_sZG0ibEUk13xV6-GGrlij8RQaOnjnN7Rox2xu1N_VidvJWTtZQyued"/>
+</div>
+<div>
+<h5 class="font-semibold text-primary">Linda Morales</h5>
+<p class="text-xs text-on-surface-variant uppercase font-bold tracking-tight">Homeowner</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-900 w-full border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-1">
+<div class="text-lg font-bold text-[#0A2540] dark:text-white mb-4">SecureNet Installers</div>
+<p class="font-['Inter'] text-sm leading-relaxed text-slate-500 dark:text-slate-400 mb-4">Leading provider of high-security surveillance and networking solutions for modern enterprises and homes.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#0A2540] dark:text-white cursor-pointer hover:text-[#FF7A00]">social_leaderboard</span>
+<span class="material-symbols-outlined text-[#0A2540] dark:text-white cursor-pointer hover:text-[#FF7A00]">photo_camera</span>
+<span class="material-symbols-outlined text-[#0A2540] dark:text-white cursor-pointer hover:text-[#FF7A00]">alternate_email</span>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-[#0A2540] dark:text-white mb-4 uppercase text-xs tracking-widest">Our Services</h4>
+<ul class="space-y-2 font-['Inter'] text-sm">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#0A2540] dark:hover:text-white underline transition-all" href="#">CCTV Installation</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#0A2540] dark:hover:text-white underline transition-all" href="#">Network Setup</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#0A2540] dark:hover:text-white underline transition-all" href="#">Maintenance</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#0A2540] dark:hover:text-white underline transition-all" href="#">Repair Services</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#0A2540] dark:text-white mb-4 uppercase text-xs tracking-widest">Company</h4>
+<ul class="space-y-2 font-['Inter'] text-sm">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#0A2540] dark:hover:text-white underline transition-all" href="#">About Us</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#0A2540] dark:hover:text-white underline transition-all" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#0A2540] dark:hover:text-white underline transition-all" href="#">Terms of Service</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#0A2540] dark:hover:text-white underline transition-all" href="#">Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#0A2540] dark:text-white mb-4 uppercase text-xs tracking-widest">Contact Info</h4>
+<ul class="space-y-4 font-['Inter'] text-sm text-slate-500 dark:text-slate-400">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-[#FF7A00] text-sm mt-1">location_on</span>
+<span>123 Security Avenue, Tech Plaza, Suite 400</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#FF7A00] text-sm">phone</span>
+<span>+1 (555) 012-3456</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#FF7A00] text-sm">mail</span>
+<span>info@securenetinstallers.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 py-6 border-t border-slate-100 dark:border-slate-800 text-center">
+<p class="font-['Inter'] text-sm text-slate-500 dark:text-slate-400">© 2024 SecureNet CCTV &amp; Network Solutions. All rights reserved.</p>
+</div>
+</footer>
+<!-- Floating WhatsApp Button -->
+<a class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all flex items-center justify-center" href="#">
+<svg class="w-8 h-8 fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835c1.511.895 3.013 1.341 4.541 1.341 5.287 0 9.589-4.301 9.591-9.591.002-5.288-4.3-9.589-9.591-9.589-5.287 0-9.589 4.301-9.591 9.59-.001 1.902.553 3.449 1.602 4.89l-.999 3.648 3.739-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
+</svg>
+</a>
+</body></html>

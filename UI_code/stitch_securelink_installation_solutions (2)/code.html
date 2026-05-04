@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Products | SecureNet Installers</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#ffdbc8",
+                    "on-primary-fixed": "#001c37",
+                    "primary-container": "#0a2540",
+                    "surface-dim": "#d8dadc",
+                    "primary-fixed-dim": "#b0c8eb",
+                    "secondary-container": "#fb7800",
+                    "surface-bright": "#f7f9fb",
+                    "secondary": "#994700",
+                    "inverse-on-surface": "#eff1f3",
+                    "tertiary-container": "#012544",
+                    "tertiary-fixed-dim": "#acc9ef",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#718db1",
+                    "on-primary-container": "#768dad",
+                    "inverse-primary": "#b0c8eb",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#49607e",
+                    "secondary-fixed-dim": "#ffb68b",
+                    "on-primary-fixed-variant": "#314865",
+                    "surface": "#f7f9fb",
+                    "tertiary-fixed": "#d2e4ff",
+                    "on-tertiary-fixed": "#001d36",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#e6e8ea",
+                    "outline-variant": "#c4c6ce",
+                    "on-background": "#191c1e",
+                    "on-secondary-fixed-variant": "#753400",
+                    "surface-variant": "#e0e3e5",
+                    "on-tertiary-fixed-variant": "#2c4869",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#592600",
+                    "surface-container": "#eceef0",
+                    "on-surface-variant": "#43474d",
+                    "outline": "#74777e",
+                    "primary-fixed": "#d2e4ff",
+                    "primary": "#000f22",
+                    "on-surface": "#191c1e",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "inverse-surface": "#2d3133",
+                    "tertiary": "#000f21",
+                    "on-primary": "#ffffff",
+                    "surface-container-highest": "#e0e3e5",
+                    "surface-container-low": "#f2f4f6",
+                    "background": "#f7f9fb",
+                    "on-secondary-fixed": "#321200"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "section-padding": "80px",
+                    "gutter": "24px",
+                    "stack-sm": "8px",
+                    "margin-mobile": "16px",
+                    "stack-lg": "32px",
+                    "stack-md": "16px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h2": ["Inter"],
+                    "h3": ["Inter"],
+                    "button": ["Inter"],
+                    "h1": ["Inter"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h2": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "letterSpacing": "0", "fontWeight": "600"}],
+                    "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}],
+                    "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .product-card-shadow {
+            box-shadow: 0px 4px 20px rgba(10, 37, 64, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-100 dark:border-slate-800 shadow-sm docked full-width top-0 sticky z-50">
+<nav class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+<div class="text-xl font-black text-[#0A2540] dark:text-white">SecureNet Installers</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Inter'] font-semibold text-sm uppercase tracking-wider text-[#0A2540] dark:text-slate-300 hover:text-[#FF7A00] transition-colors duration-200" href="#">Home</a>
+<a class="font-['Inter'] font-semibold text-sm uppercase tracking-wider text-[#FF7A00] border-b-2 border-[#FF7A00] pb-1" href="#">Products</a>
+<a class="font-['Inter'] font-semibold text-sm uppercase tracking-wider text-[#0A2540] dark:text-slate-300 hover:text-[#FF7A00] transition-colors duration-200" href="#">Services</a>
+<a class="font-['Inter'] font-semibold text-sm uppercase tracking-wider text-[#0A2540] dark:text-slate-300 hover:text-[#FF7A00] transition-colors duration-200" href="#">Gallery</a>
+<a class="font-['Inter'] font-semibold text-sm uppercase tracking-wider text-[#0A2540] dark:text-slate-300 hover:text-[#FF7A00] transition-colors duration-200" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block text-[#0A2540] font-semibold text-sm">Call Now</button>
+<button class="bg-[#FF7A00] text-white px-6 py-2.5 rounded-lg font-button text-button shadow-md hover:opacity-90 active:scale-95 transition-all">Get a Quote</button>
+</div>
+</nav>
+</header>
+<main class="min-h-screen">
+<!-- Hero / Page Header -->
+<section class="py-16 bg-primary-container text-white">
+<div class="max-w-7xl mx-auto px-6">
+<h1 class="font-h1 text-h1 mb-4">Enterprise-Grade Hardware</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-2xl">Discover our curated selection of high-performance security cameras, networking routers, and enterprise infrastructure components.</p>
+</div>
+</section>
+<!-- Filter & Search Bar Section -->
+<section class="py-10 border-b border-surface-container">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row md:items-center justify-between gap-6">
+<!-- Search -->
+<div class="relative flex-1 max-w-md">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-white border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary-container focus:border-primary-container transition-all outline-none" placeholder="Search products..." type="text"/>
+</div>
+<!-- Filters -->
+<div class="flex items-center gap-3 overflow-x-auto pb-2 md:pb-0">
+<button class="px-6 py-2 rounded-full bg-primary-container text-white font-button text-sm whitespace-nowrap">All Products</button>
+<button class="px-6 py-2 rounded-full bg-white border border-outline-variant text-on-surface hover:border-secondary-container transition-colors font-button text-sm whitespace-nowrap">Camera</button>
+<button class="px-6 py-2 rounded-full bg-white border border-outline-variant text-on-surface hover:border-secondary-container transition-colors font-button text-sm whitespace-nowrap">Router</button>
+<button class="px-6 py-2 rounded-full bg-white border border-outline-variant text-on-surface hover:border-secondary-container transition-colors font-button text-sm whitespace-nowrap">NVR Systems</button>
+<button class="px-6 py-2 rounded-full bg-white border border-outline-variant text-on-surface hover:border-secondary-container transition-colors font-button text-sm whitespace-nowrap">Accessories</button>
+</div>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="py-20 max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product 1 -->
+<div class="bg-white rounded-xl product-card-shadow overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+<div class="h-64 overflow-hidden relative bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional high-definition dome security camera mounted on a clean white ceiling. The lighting is crisp and bright, showcasing the metallic finish and glass lens of the device. The background is a minimalist corporate office setting with soft shadows, emphasizing technical precision and modern security aesthetics in a high-key light mode." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzGdETiIsP4WrmD9MSvchZxUqeuxVDZJt1poWcHio8r-IfrZPcwKyRMdkX7nOBO4UNeGvBHE_97xOjO0OVdmfj9ciXfMqbjgmi3luO8D0jk9lFv-_e-h0ynoYCv5wFrOlU1pWcorcQ5gW3UkJ-_ETyxhf7FAlBo5DY9mDyP2VNX0Fkkv4hyWqT2vCj4PskpS7snrIB9PxuVgkx5fo3mHXstKPjHtGD7zhg2GubMsaMaDJKEZWJSSl7bWyxR43GWthZeku_I_729ZUK"/>
+<div class="absolute top-4 right-4 bg-secondary-container text-white px-3 py-1 rounded text-label-caps font-label-caps">TOP RATED</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-1 text-secondary mb-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-outline font-medium ml-1">(48)</span>
+</div>
+<h3 class="font-h3 text-lg mb-1 text-primary-container">SecurePro 4K Dome</h3>
+<p class="text-sm text-on-surface-variant mb-4">Ultra-HD Night Vision, AI Motion Tracking</p>
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold text-primary">$299.00</span>
+<button class="text-secondary font-button text-sm flex items-center gap-1 hover:underline">
+                                View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-white rounded-xl product-card-shadow overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+<div class="h-64 overflow-hidden relative bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sleek black enterprise-grade WiFi 6 router with multiple high-gain antennas. The device is positioned on a polished dark surface with subtle reflections. The background is a soft-focus server room with blue and orange LED status lights, creating a mood of high-speed connectivity and technical reliability in a modern corporate environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT5MQBCAUr-udB3GvY9b2N8MeMmbaH3N1CR-j_rD_jzphqo1ZbewEbaN3tgZIc78Ul0cNu5gyADPsT1pGKZ2rv54wUZ9MwikW-Lz-u-KTAV5tFTwUk87kFeDj796b7kgJ7iwh25ir2V-dwA-_fLbEVLQAxlJVx1Dhi3x0b5H8fhmAdE804Ivf9g5tqQ8gz5X7wf3_GddkJq4PaqjdIsLuMQOJBgzkVoEnHC--b_m_QZtV7idsxKoKVX9MIeCzcCRUIfizns_6xTA3j"/>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-1 text-secondary mb-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="text-xs text-outline font-medium ml-1">(32)</span>
+</div>
+<h3 class="font-h3 text-lg mb-1 text-primary-container">NetSpeed X-1000</h3>
+<p class="text-sm text-on-surface-variant mb-4">WiFi 6 Enterprise Mesh Router</p>
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold text-primary">$450.00</span>
+<button class="text-secondary font-button text-sm flex items-center gap-1 hover:underline">
+                                View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="bg-white rounded-xl product-card-shadow overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+<div class="h-64 overflow-hidden relative bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional silver bullet security camera with infrared sensors visible around the lens. The camera is mounted on a rugged brick wall exterior. The lighting is dramatic, suggesting dusk or early evening, highlighting the robust weather-resistant construction. The overall aesthetic is industrial and authoritative, emphasizing outdoor property protection and technical durability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbJUTyhxnshphKhHluSLfncKB1fyhLsrNsqSGFKMWXvtpgtF7-xbA93KBCqYsjpkG5X8mrELcqhvcbxf8o-7LtsjZd-JuscVGR-L-UH27VPkhoC3E7gfRVSwcThiwAbpAsjR0h5KDSUBskPIEU1GDl-Q3Tq2LsiQDB6u1Zn7yc1fe6E0gSG--aKUqRwPvYi9XrD4g_X_pY3roHSyJ29A03zQ2ljzspaYS_beUU2BrxsrzJISgKrnmgL6DcUD8npFQMb_mLwMkeR5ZK"/>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-1 text-secondary mb-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-outline font-medium ml-1">(120)</span>
+</div>
+<h3 class="font-h3 text-lg mb-1 text-primary-container">Sentinel Bullet Pro</h3>
+<p class="text-sm text-on-surface-variant mb-4">IP67 Weatherproof, 100ft IR Range</p>
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold text-primary">$189.00</span>
+<button class="text-secondary font-button text-sm flex items-center gap-1 hover:underline">
+                                View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="bg-white rounded-xl product-card-shadow overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+<div class="h-64 overflow-hidden relative bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-capacity network switch with multiple ethernet ports and glowing blue indicator lights. The device is housed in a professional rack mount. The background is a clean server cabinet with organized blue cabling, symbolizing structured networking and technical excellence. The image uses a minimalist tech aesthetic with a focus on hardware detail and high-contrast professional lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeBJ5C95vIWmTosCO13xmX2MyKEm1YAlCRjhc0Wxii09zybCx-PJBnMCEpYxAuJiBKzDvhK1iuXD_UCK3ZqJxeLJF3gjdWbvvzMYRTSvt9-qdURcDD5FmxWVVwLcOB6iRM1d8SUKgF1Uu5vPgHZ0CWIALXksPDMKBZiQJcVbA9tKX2VYBgUPRJ-hhUeWaZUoTXC9DDC4XX0-Z4UmLtKmVW5v1a8rKMrmd6B_nLj-oBF9lyhljwQB_jSHO1tiqQ3yg8p_r37ZC7ri-h"/>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-1 text-secondary mb-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="text-xs text-outline font-medium ml-1">(24)</span>
+</div>
+<h3 class="font-h3 text-lg mb-1 text-primary-container">CoreSwitch 24-PoE</h3>
+<p class="text-sm text-on-surface-variant mb-4">24 Port Managed Gigabit Switch</p>
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold text-primary">$375.00</span>
+<button class="text-secondary font-button text-sm flex items-center gap-1 hover:underline">
+                                View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Row 2 (More products to fill the grid) -->
+<!-- Product 5 -->
+<div class="bg-white rounded-xl product-card-shadow overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+<div class="h-64 overflow-hidden relative bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A modern smart home doorbell with an integrated camera lens and a glowing circular LED button. The device is mounted on a contemporary dark wood siding. The image is captured in bright daylight, highlighting the premium glass and brushed metal textures. The mood is welcoming yet secure, perfect for high-end residential applications with a focus on minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgKJ6VeeOE3UueOELmNpDOonjFhxPIM7kPkeDb8YN_jUfuHDyfC_nSX1CK4rR4k2xU4m4Sk-6V5WGEYSSRWE-R9hWWkbIIo3PvV1Hq2dgTl1H5jHd7sYhLpV4FbGouDq5W_FTzKsk5FPKW-hFV5fjtHs83-JI-eQn33GENY9ey1TPZ9JMwy9vVTrjIZ4zZw5fb4zKe93dclfcfIHB390biakwq9DcpFpoJ4IuOdb46rxbE_FmKDR5aCHSufbO8Va_syLdw_Y9C98s9"/>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-1 text-secondary mb-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-outline font-medium ml-1">(95)</span>
+</div>
+<h3 class="font-h3 text-lg mb-1 text-primary-container">SecureBell Video 2</h3>
+<p class="text-sm text-on-surface-variant mb-4">Wide-Angle View, Two-Way Audio</p>
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold text-primary">$215.00</span>
+<button class="text-secondary font-button text-sm flex items-center gap-1 hover:underline">
+                                View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 6 -->
+<div class="bg-white rounded-xl product-card-shadow overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+<div class="h-64 overflow-hidden relative bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-performance outdoor wireless access point mounted on a pole against a clear blue sky. The device is white, sleek, and minimalist in design. The lighting is natural and bright, emphasizing the clean lines and professional installation quality. This visual represents reliable long-range connectivity in an outdoor enterprise setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6zRDb9hLSkLqMbjXa5u1zfGiSBKj0rJoDH-2T0q5PB04xwSLkNp1KSXvIENBKWXw5kB__U0TkaKYyLm6zXUA89oV6xhkX9yS1b2MnNH3FMtT5-1qaNY2quyk7_VLQptC6W939RQThY_KO6SjxNKofhCWY3jOuggWnVGD67lVJVmlQFSwqatLGkk0fro0ZYSDABtSpEAbNgNXAZbPOHIY1eNASbNRIH8_gPPZRfuUrqwXTmtPSPS9Sgp5nF178H2tvrytHus3667oJ"/>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-1 text-secondary mb-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="text-xs text-outline font-medium ml-1">(18)</span>
+</div>
+<h3 class="font-h3 text-lg mb-1 text-primary-container">AirLink Outdoor AP</h3>
+<p class="text-sm text-on-surface-variant mb-4">Long Range WiFi, AC1200 Speeds</p>
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold text-primary">$310.00</span>
+<button class="text-secondary font-button text-sm flex items-center gap-1 hover:underline">
+                                View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 7 -->
+<div class="bg-white rounded-xl product-card-shadow overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+<div class="h-64 overflow-hidden relative bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A group of sleek 1U network storage servers stacked in a modern datacenter. The metallic front panels feature glowing green status LEDs and high-quality ventilation grilles. The lighting is sophisticated and moody, with deep blacks and sharp highlights, conveying high-security data management and enterprise reliability in a tech-focused minimalist style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkkZyFKoKZX0_Ax5xwZ7vi-O8lQZrbUK9RY2nATY5kGseIK9Qe8xr_RL_Rp7wdlGNNyeXWPgTbZ3WphJYJ0XNDzq5rdRuSZ4EUIs_bZ3h8bt3L6bwmVpJFHBxDtuBFITO8yqpQSlGm0FQcMUW2jIgWKEEB_-DU-pkdWgcIas2K0jUq97Fbb51r7DqJBFv5Nrd9mUhugCWoG9RU9Y7Wlz_feBSr-SopdJ7MYoVb1XqcFY-rp2vo2jrGfBd7aI5MUYwSuIPu0ajqVF0c"/>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-1 text-secondary mb-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-outline font-medium ml-1">(56)</span>
+</div>
+<h3 class="font-h3 text-lg mb-1 text-primary-container">Vault-8 NVR Hub</h3>
+<p class="text-sm text-on-surface-variant mb-4">8TB Storage, 16-Channel Support</p>
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold text-primary">$549.00</span>
+<button class="text-secondary font-button text-sm flex items-center gap-1 hover:underline">
+                                View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 8 -->
+<div class="bg-white rounded-xl product-card-shadow overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+<div class="h-64 overflow-hidden relative bg-surface-container-low flex items-center justify-center p-8">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A bundle of high-quality blue Cat6 network cables with transparent gold-plated RJ45 connectors. The cables are neatly coiled on a bright, sterile white surface. The lighting is high-key and professional, focusing on the intricate details of the copper wiring and clear plastic. This imagery represents technical precision and the importance of infrastructure in networking." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTkEw2oLETeABtxgbh2Wx7hL4CvQR9f7kxx_6_ImvhlwXPhgjbhnAWtEW55aEob0-d_q8exh8OWNb2yDdjpbIKCnq3aMsJedgVO8Sdz5Fq29RRyTNWLjZ34UykNeuVSpCm2o-2D8iFA9cY9t_wc-BceshYqTs7rjTr9zt5cXF-zBbQ7HmzwRZ4Nkeh_nPzMzLMM5VX-aUXqP3c8vjYk7CLBkt42LG6PFTK3t6jZvodW2IdSmqXNXabpXxQE7ucXNwauJmP4GRUXbVh"/>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-1 text-secondary mb-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="text-xs text-outline font-medium ml-1">(210)</span>
+</div>
+<h3 class="font-h3 text-lg mb-1 text-primary-container">Cat6 Cabling Pro Kit</h3>
+<p class="text-sm text-on-surface-variant mb-4">1000ft Spool, Pure Copper Shielded</p>
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold text-primary">$145.00</span>
+<button class="text-secondary font-button text-sm flex items-center gap-1 hover:underline">
+                                View Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Load More -->
+<div class="mt-16 flex justify-center">
+<button class="px-8 py-3 border-2 border-primary-container text-primary-container font-button rounded-lg hover:bg-primary-container hover:text-white transition-all">Load More Products</button>
+</div>
+</section>
+</main>
+<!-- Floating WhatsApp Button -->
+<a class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all flex items-center justify-center group" href="#">
+<svg class="w-7 h-7" fill="currentColor" viewbox="0 0 24 24">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+</svg>
+<span class="absolute right-full mr-3 bg-white text-on-surface text-sm font-semibold px-3 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Chat with an Expert</span>
+</a>
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 w-full">
+<div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-1">
+<div class="text-lg font-bold text-[#0A2540] dark:text-white mb-4">SecureNet Installers</div>
+<p class="font-['Inter'] text-sm leading-relaxed text-slate-500 dark:text-slate-400">Professional CCTV and network infrastructure solutions for modern homes and businesses. Reliability guaranteed.</p>
+</div>
+<div>
+<h4 class="font-bold text-primary-container mb-4">Solutions</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 hover:text-[#FF7A00] transition-colors text-sm" href="#">Security Cameras</a></li>
+<li><a class="text-slate-500 hover:text-[#FF7A00] transition-colors text-sm" href="#">Network Setup</a></li>
+<li><a class="text-slate-500 hover:text-[#FF7A00] transition-colors text-sm" href="#">Smart Home</a></li>
+<li><a class="text-slate-500 hover:text-[#FF7A00] transition-colors text-sm" href="#">Maintenance</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-primary-container mb-4">Resources</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 hover:text-[#FF7A00] transition-colors text-sm" href="#">Support</a></li>
+<li><a class="text-slate-500 hover:text-[#FF7A00] transition-colors text-sm" href="#">Sitemap</a></li>
+<li><a class="text-slate-500 hover:text-[#FF7A00] transition-colors text-sm" href="#">Documentation</a></li>
+<li><a class="text-slate-500 hover:text-[#FF7A00] transition-colors text-sm" href="#">System Status</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-primary-container mb-4">Stay Connected</h4>
+<div class="flex gap-4 mb-4">
+<a class="w-8 h-8 flex items-center justify-center bg-surface-container rounded-full hover:text-[#FF7A00] transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="w-8 h-8 flex items-center justify-center bg-surface-container rounded-full hover:text-[#FF7A00] transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+</div>
+<button class="text-sm text-[#FF7A00] font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">mail</span> sales@securenet.com
+                </button>
+</div>
+</div>
+<div class="border-t border-slate-100 dark:border-slate-800 py-6">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-['Inter'] text-sm leading-relaxed text-slate-500 dark:text-slate-400">© 2024 SecureNet CCTV &amp; Network Solutions. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-[#0A2540] dark:hover:text-white underline" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-[#0A2540] dark:hover:text-white underline" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
