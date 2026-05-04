@@ -7,9 +7,9 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const defaultImages = [
-    { id: 'g1', imageUrl: '/api/gallery-image-1' },
-    { id: 'g2', imageUrl: '/api/gallery-image-2' },
-    { id: 'g3', imageUrl: '/api/gallery-image-3' }
+    { id: 'g1', imageUrl: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80' },
+    { id: 'g2', imageUrl: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80' },
+    { id: 'g3', imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80' }
   ];
 
   useEffect(() => {

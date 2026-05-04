@@ -82,7 +82,7 @@ const Services = () => {
             </div>
             <div className="flex-1 w-full">
               <div className="bg-white p-2 rounded-2xl shadow-2xl transform rotate-2">
-                <img className="rounded-xl w-full h-[400px] object-cover" alt="Security Networking Services" src="/api/hero-image" />
+                <img className="rounded-xl w-full h-[400px] object-cover" alt="Security Networking Services" src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=800&q=80" />
               </div>
             </div>
           </div>
