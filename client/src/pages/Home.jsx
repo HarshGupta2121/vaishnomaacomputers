@@ -40,15 +40,15 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-[#FF7A00] font-h2 text-h2 mb-1">200+</div>
+              <div className="text-[#FF7A00] font-h2 text-h2 mb-1">2000+</div>
               <div className="text-on-surface-variant font-label-caps text-label-caps">Installations</div>
             </div>
             <div className="text-center">
-              <div className="text-[#FF7A00] font-h2 text-h2 mb-1">50+</div>
+              <div className="text-[#FF7A00] font-h2 text-h2 mb-1">500+</div>
               <div className="text-on-surface-variant font-label-caps text-label-caps">Clients</div>
             </div>
             <div className="text-center">
-              <div className="text-[#FF7A00] font-h2 text-h2 mb-1">5+</div>
+              <div className="text-[#FF7A00] font-h2 text-h2 mb-1">10+</div>
               <div className="text-on-surface-variant font-label-caps text-label-caps">Years Experience</div>
             </div>
             <div className="text-center">
