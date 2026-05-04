@@ -32,21 +32,6 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Server is running' });
 });
 
-// Serve generated hero image dynamically
-app.get('/api/hero-image', (req, res) => {
-  res.sendFile('C:/Users/Harsh/.gemini/antigravity/brain/bc434eff-58c5-42bf-a0a2-44418f7929d9/security_networking_hero_1777808369019.png');
-});
-
-// Serve generated gallery images
-app.get('/api/gallery-image-1', (req, res) => {
-  res.sendFile('C:/Users/Harsh/.gemini/antigravity/brain/bc434eff-58c5-42bf-a0a2-44418f7929d9/gallery_cam_install_1777809000256.png');
-});
-app.get('/api/gallery-image-2', (req, res) => {
-  res.sendFile('C:/Users/Harsh/.gemini/antigravity/brain/bc434eff-58c5-42bf-a0a2-44418f7929d9/gallery_network_rack_1777809018646.png');
-});
-app.get('/api/gallery-image-3', (req, res) => {
-  res.sendFile('C:/Users/Harsh/.gemini/antigravity/brain/bc434eff-58c5-42bf-a0a2-44418f7929d9/gallery_smart_home_1777809035024.png');
-});
 
 const PORT = process.env.PORT || 5000;
 
