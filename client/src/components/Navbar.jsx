@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const location = useLocation();
   const path = location.pathname;
+  const [isOpen, setIsOpen] = useState(false);
 
   const getLinkClass = (currentPath) => {
     const isActive = path === currentPath || (currentPath !== '/' && path.startsWith(currentPath));
@@ -26,11 +27,28 @@ const Navbar = () => {
         </nav>
         <div className="flex items-center gap-4">
           <button className="hidden lg:block text-[#0A2540] font-semibold text-sm px-4 py-2 hover:opacity-80 transition-all">Call Now</button>
-          <Link to="/contact">
+          <Link to="/contact" className="hidden md:block">
             <button className="bg-[#FF7A00] text-white px-6 py-3 rounded-lg font-button text-button shadow-lg hover:opacity-90 active:scale-95 transition-all">Get a Quote</button>
           </Link>
+          <button className="md:hidden text-[#0A2540] dark:text-white" onClick={() => setIsOpen(!isOpen)}>
+            <span className="material-symbols-outlined text-3xl">{isOpen ? 'close' : 'menu'}</span>
+          </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden absolute top-20 left-0 w-full bg-white dark:bg-slate-900 shadow-xl border-b border-slate-100 dark:border-slate-800 flex flex-col p-6 gap-6">
+          <Link to="/" className={getLinkClass('/')} onClick={() => setIsOpen(false)}>Home</Link>
+          <Link to="/products" className={getLinkClass('/products')} onClick={() => setIsOpen(false)}>Products</Link>
+          <Link to="/services" className={getLinkClass('/services')} onClick={() => setIsOpen(false)}>Services</Link>
+          <Link to="/gallery" className={getLinkClass('/gallery')} onClick={() => setIsOpen(false)}>Gallery</Link>
+          <Link to="/contact" className={getLinkClass('/contact')} onClick={() => setIsOpen(false)}>Contact</Link>
+          <Link to="/contact" onClick={() => setIsOpen(false)}>
+            <button className="w-full bg-[#FF7A00] text-white px-6 py-3 rounded-lg font-button text-button shadow-lg hover:opacity-90 active:scale-95 transition-all">Get a Quote</button>
+          </Link>
+        </div>
+      )}
     </header>
   );
 };
